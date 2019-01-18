@@ -1,0 +1,62 @@
+{
+    "manifest_version": 2,
+    "name": "SpotKeys",
+    "description": "Allow the user to control the Spotify Web Player from any tab in chrome using specified Hot Keys",
+    "version": "1",
+    "author": "Quin Outland",
+    "content_scripts": [
+        {
+          "matches": [
+              "<all_urls>"
+          ],
+          "js": ["jquery-3.3.1.min.js", "content.js"]
+        }
+    ],
+
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+
+   "permissions": [
+          "tabs",
+          "https://open.spotify.com/*"
+    ],
+
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "commands": {
+        "skip_song": {
+            "suggested_key": {
+              "default": "Alt+Shift+Right",
+              "windows": "Alt+Shift+Right",
+              "mac": "Alt+Shift+Right"
+            },
+            "description": "Skip a song"
+        },
+        "prev_song": {
+            "suggested_key": {
+                "default": "Alt+Shift+Left",
+                "windows": "Alt+Shift+Left",
+                "mac": "Alt+Shift+Left"
+            },
+            "description": "Go back a song"
+        },
+        "pause/play": {
+            "suggested_key": {
+                "default": "Alt+Shift+Space",
+                "windows": "Alt+Shift+Space",
+                "mac": "Alt+Shift+Space"
+            },
+            "description": "Go back a song"
+        },
+        "add_song": {
+            "suggested_key": {
+                "default": "Alt+Shift+Up",
+                "windows": "Alt+Shift+Up",
+                "mac": "Alt+Shift+Up"
+            },
+            "description": "Go back a song"
+        }
+    }
+}
