@@ -14,7 +14,7 @@
     ],
 
     "browser_action": {
-        "default_icon": "Fire_Emoji_grande.png"
+        "default_icon": "icon.png"
     },
 
    "permissions": [
